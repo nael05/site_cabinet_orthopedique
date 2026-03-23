@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DSA Orthopédie - Damien Salhorgne</title>
+  
+  <link rel="icon" type="image/png" href="picture/logo.png">
+  <link rel="stylesheet" href="styles.css">
+  
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="#" class="nav-logo" onclick="scrollToTop()">
+      <img src="picture/logo.png" alt="Logo DSA Orthopédie" class="nav-logo-img">
+      DSA Orthopédie
+    </a>
+    <ul class="nav-links">
+      <li><a href="#presentation">Présentation</a></li>
+      <li><a href="#chiffres">Chiffres</a></li>
+      <li><a href="#expertises">Expertises</a></li>
+      <li><a href="#avis">Avis</a></li>
+      <li><a href="#horaires">Horaires</a></li>
+      <li><a href="#tarifs">Tarifs</a></li>
+      <li><a href="#acces">Accès</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="hamburger" onclick="toggleMenu()" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#presentation" onclick="closeMenu()"><i data-lucide="building-2" style="width:18px;vertical-align:middle;margin-right:8px"></i> Présentation</a>
+  <a href="#chiffres" onclick="closeMenu()"><i data-lucide="bar-chart-3" style="width:18px;vertical-align:middle;margin-right:8px"></i> Chiffres clés</a>
+  <a href="#expertises" onclick="closeMenu()"><i data-lucide="stethoscope" style="width:18px;vertical-align:middle;margin-right:8px"></i> Expertises</a>
+  <a href="#avis" onclick="closeMenu()"><i data-lucide="star" style="width:18px;vertical-align:middle;margin-right:8px"></i> Avis clients</a>
+  <a href="#horaires" onclick="closeMenu()"><i data-lucide="clock" style="width:18px;vertical-align:middle;margin-right:8px"></i> Horaires</a>
+  <a href="#tarifs" onclick="closeMenu()"><i data-lucide="banknote" style="width:18px;vertical-align:middle;margin-right:8px"></i> Tarifs</a>
+  <a href="#acces" onclick="closeMenu()"><i data-lucide="map-pin" style="width:18px;vertical-align:middle;margin-right:8px"></i> Accès</a>
+  <a href="#contact" onclick="closeMenu()"><i data-lucide="phone" style="width:18px;vertical-align:middle;margin-right:8px"></i> Contact</a>
+</div>
+
+<section class="hero" style="max-width:100%">
+    <div class="hero-content">
+    <span class="hero-badge"><i data-lucide="check-circle-2" style="width:16px;vertical-align:middle;margin-right:6px"></i> Accepte les nouveaux patients</span>
+    <h1>Damien Salhorgne</h1>
+    <h2>Orthopédiste · Orthésiste · Podologiste</h2>
+    <p class="subtitle"><i data-lucide="map-pin" style="width:16px;vertical-align:middle;margin-right:4px"></i> 6 Allée de Jouy, 95280 Jouy-le-Moutier</p>
+    <div class="hero-buttons">
+      <a href="https://www.doctolib.fr/orthopediste-orthesiste/jouy-le-moutier/damien-salhorgne#location" target="_blank" rel="noopener noreferrer" class="btn btn-doctolib">
+        <img src="picture/doctolib_logo.png" alt="Doctolib" style="width: 20px; height: 20px; filter: brightness(0) invert(1); margin-right: 8px; vertical-align: middle;">
+        Prendre rendez-vous
+      </a>
+      <a href="#expertises" class="btn btn-outline"><i data-lucide="search" style="width:18px"></i> Découvrir nos soins</a>
+    </div>
+  </div>
+</section>
+
+<div class="status-bar">
+  <div class="status-bar-inner">
+    <div class="status-item"><div class="status-dot"></div><span><strong>Nouveaux patients acceptés</strong></span></div>
+    <div class="status-item"><i data-lucide="credit-card" style="width:18px;color:var(--text-light)"></i> Carte Vitale acceptée</div>
+    <div class="status-item"><i data-lucide="building-2" style="width:18px;color:var(--text-light)"></i> Tiers payant Sécurité sociale</div>
+  </div>
+</div>
+
+<section id="chiffres">
+  <div class="section-header anim">
+    <span class="section-icon"><i data-lucide="bar-chart-3" style="width:40px;height:40px;color:var(--primary)"></i></span>
+    <h2>Chiffres clés</h2>
+    <p>DSA Orthopédie en quelques chiffres</p>
+  </div>
+  <div class="stats-grid">
+    <div class="stat-card anim d1"><span class="stat-icon"><i data-lucide="award" style="width:36px;height:36px;color:var(--primary)"></i></span><span class="stat-number"><span class="counter" data-target="15">0</span><span class="stat-suffix">+</span></span><span class="stat-label">Années d'expérience</span></div>
+    <div class="stat-card anim d2"><span class="stat-icon"><i data-lucide="footprints" style="width:36px;height:36px;color:var(--primary)"></i></span><span class="stat-number"><span class="counter" data-target="3000">0</span><span class="stat-suffix">+</span></span><span class="stat-label">Patients accompagnés</span></div>
+    <div class="stat-card anim d3"><span class="stat-icon"><i data-lucide="activity" style="width:36px;height:36px;color:var(--primary)"></i></span><span class="stat-number"><span class="counter" data-target="14">0</span></span><span class="stat-label">Spécialités proposées</span></div>
+    <div class="stat-card anim d4"><span class="stat-icon"><i data-lucide="star" style="width:36px;height:36px;color:var(--primary)"></i></span><span class="stat-number"><span class="counter" data-target="4" data-decimal="2" data-final="4.2">0</span><span class="stat-suffix">/5</span></span><span class="stat-label">Note Google moyenne</span></div>
+  </div>
+</section>
+
+<div class="divider"><hr></div>
+
+<section id="presentation">
+  <div class="section-header anim"><span class="section-icon"><i data-lucide="building-2" style="width:40px;height:40px;color:var(--primary)"></i></span><h2>Présentation</h2><p>Cabinet Jouy-le-Moutier</p></div>
+  <div class="presentation-content">
+    <div class="presentation-card anim">
+      <p>Les praticiens titulaires du titre orthopédiste-orthésiste-podologiste sont capables de concevoir, de réaliser et de poser des appareillages plantaires destinés à restituer le confort et le bien-être aux patients qui souffrent de pathologies musculaire, tendineuse ou osseuse. Ces spécialistes réalisent des orthèses sur mesure ou de série en fonction de la prescription, de la pathologie et de la morphologie du patient.</p>
+      <div class="info-chips">
+        <span class="chip"><i data-lucide="graduation-cap" style="width:16px"></i> Diplôme d'orthopédiste-orthésiste</span>
+        <span class="chip"><i data-lucide="map-pin" style="width:16px"></i> Cabinet Jouy-le-Moutier</span>
+        <span class="chip"><i data-lucide="check-circle-2" style="width:16px"></i> Nouveaux patients acceptés</span>
+      </div>
+    </div>
+    <div class="cards-grid">
+      <div class="card anim d1"><span class="card-icon"><i data-lucide="stethoscope" style="width:32px;height:32px;color:var(--primary)"></i></span><h3>Orthèses sur mesure</h3><p>Conception et réalisation d'appareillages plantaires personnalisés adaptés à la morphologie et la pathologie de chaque patient.</p></div>
+      <div class="card anim d2"><span class="card-icon"><i data-lucide="footprints" style="width:32px;height:32px;color:var(--primary)"></i></span><h3>Bilan podologique</h3><p>Analyse complète de la posture et de la biomécanique pour un diagnostic précis et un traitement sur mesure.</p></div>
+      <div class="card anim d3"><span class="card-icon"><i data-lucide="heart-pulse" style="width:32px;height:32px;color:var(--primary)"></i></span><h3>Prise en charge SED</h3><p>Expertise spécialisée dans la prise en charge thérapeutique du Syndrome d'Ehlers-Danlos, avec des solutions adaptées.</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"><hr></div>
+
+<section id="expertises">
+  <div class="section-header anim"><span class="section-icon"><i data-lucide="activity" style="width:40px;height:40px;color:var(--primary)"></i></span><h2>Expertises & actes</h2><p>L'ensemble de nos spécialités au service de votre bien-être</p></div>
+  <div class="expertises-grid">
+    <div class="expertise-tag anim d1"><span class="dot"></span>Attelle</div>
+    <div class="expertise-tag anim d1"><span class="dot"></span>Attelle de doigt</div>
+    <div class="expertise-tag anim d2"><span class="dot"></span>Attelle de main</div>
+    <div class="expertise-tag anim d2"><span class="dot"></span>Attelle de poignet</div>
+    <div class="expertise-tag anim d3"><span class="dot"></span>Bas de contention</div>
+    <div class="expertise-tag anim d3"><span class="dot"></span>Bilan podologique</div>
+    <div class="expertise-tag anim d4"><span class="dot"></span>Orthopédie</div>
+    <div class="expertise-tag anim d4"><span class="dot"></span>Orthèse</div>
+    <div class="expertise-tag anim d5"><span class="dot"></span>Orthèse de poignet</div>
+    <div class="expertise-tag anim d5"><span class="dot"></span>Orthèse plantaire</div>
+    <div class="expertise-tag anim d6"><span class="dot"></span>Podologie</div>
+    <div class="expertise-tag anim d6"><span class="dot"></span>Podologie du sport</div>
+    <div class="expertise-tag anim d6"><span class="dot"></span>Prise en charge SED</div>
+    <div class="expertise-tag anim d6"><span class="dot"></span>Semelles orthopédiques</div>
+  </div>
+</section>
+
+<div class="divider"><hr></div>
+
+<section class="reviews-section" id="avis">
+  <div class="section-header anim"><span class="section-icon"><i data-lucide="star" style="width:40px;height:40px;color:var(--primary)"></i></span><h2>Avis de nos patients</h2><p>Ce que nos clients disent de nous</p></div>
+
+  <div class="reviews-summary anim">
+    <div class="reviews-big-score">
+      <div class="reviews-big-number">4.2</div>
+      <div class="reviews-big-stars">
+        <i data-lucide="star" style="width:20px;height:20px;fill:var(--star);color:var(--star)"></i>
+        <i data-lucide="star" style="width:20px;height:20px;fill:var(--star);color:var(--star)"></i>
+        <i data-lucide="star" style="width:20px;height:20px;fill:var(--star);color:var(--star)"></i>
+        <i data-lucide="star" style="width:20px;height:20px;fill:var(--star);color:var(--star)"></i>
+        <i data-lucide="star" style="width:20px;height:20px;color:var(--star)"></i>
+      </div>
+      <div class="reviews-big-count">14 avis Google</div>
+    </div>
+    <div class="reviews-bars">
+      <div class="review-bar-row"><span>5</span><div class="review-bar"><div class="review-bar-fill" data-width="60" style="width:0%"></div></div><span>60%</span></div>
+      <div class="review-bar-row"><span>4</span><div class="review-bar"><div class="review-bar-fill" data-width="15" style="width:0%"></div></div><span>15%</span></div>
+      <div class="review-bar-row"><span>3</span><div class="review-bar"><div class="review-bar-fill" data-width="5" style="width:0%"></div></div><span>5%</span></div>
+      <div class="review-bar-row"><span>2</span><div class="review-bar"><div class="review-bar-fill" data-width="5" style="width:0%"></div></div><span>5%</span></div>
+      <div class="review-bar-row"><span>1</span><div class="review-bar"><div class="review-bar-fill" data-width="15" style="width:0%"></div></div><span>15%</span></div>
+    </div>
+  </div>
+
+  <div class="reviews-track-wrapper">
+    <div class="reviews-track" id="reviewsTrack">
+      <div class="review-card positive">
+        <div class="review-header">
+          <div class="review-avatar" style="background:linear-gradient(135deg,#6c5ce7,#a29bfe)">C</div>
+          <div class="review-meta"><div class="review-name">Chloé THERAGE</div><div class="review-info">Local Guide · 13 avis</div></div>
+        </div>
+        <div class="review-stars">
+          <i data-lucide="star" style="width:14px;height:14px;fill:var(--star);color:var(--star)"></i><i data-lucide="star" style="width:14px;height:14px;fill:var(--star);color:var(--star)"></i><i data-lucide="star" style="width:14px;height:14px;fill:var(--star);color:var(--star)"></i><i data-lucide="star" style="width:14px;height:14px;fill:var(--star);color:var(--star)"></i><i data-lucide="star" style="width:14px;height:14px;fill:var(--star);color:var(--star)"></i>
+        </div>
+        <div class="review-text">Je consulte le Dr Doh depuis maintenant 3 ans et j'ai également eu l'occasion de voir son associé le Dr Salhorgne : que dire… à part un ÉNORME merci ! Je n'ai jamais été aussi bien prise en charge qu'ici, une attention de A à Z, un vrai suivi personnalisé et humain. Je recommande les yeux fermés !</div>
+        <div class="review-date"><i data-lucide="calendar" style="width:12px;vertical-align:middle;margin-right:4px"></i> Septembre 2024</div>
+      </div>
+
+      <div class="review-card positive">
+        <div class="review-header">
+          <div class="review-avatar" style="background:linear-gradient(135deg,#00b894,#55efc4)">R</div>
+          <div class="review-meta"><div class="review-name">Raph Raph</div><div class="review-info">Local Guide · 203 avis</div></div>
+        </div>
+        <div class="review-stars">
+          <i data-lucide="star" style="width:14px;height:14px;fill:var(--star);color:var(--star)"></i><i data-lucide="star" style="width:14px;height:14px;fill:var(--star);color:var(--star)"></i><i data-lucide="star" style="width:14px;height:14px;fill:var(--star);color:var(--star)"></i><i data-lucide="star" style="width:14px;height:14px;fill:var(--star);color:var(--star)"></i><i data-lucide="star" style="width:14px;height:14px;fill:var(--star);color:var(--star)"></i>
+        </div>
+        <div class="review-text">Un grand merci, praticien au top notamment pour mes deux filles, bien prises en charge pour des semelles orthopédiques. Un accueil souriant et de bonnes explications sur les étapes, cela permet aux enfants de "participer" et comprendre. Merci beaucoup !</div>
+        <div class="review-date"><i data-lucide="calendar" style="width:12px;vertical-align:middle;margin-right:4px"></i> Janvier 2023</div>
+      </div>
+
+      <div class="review-card positive">
+        <div class="review-header">
+          <div class="review-avatar" style="background:linear-gradient(135deg,#fd79a8,#e84393)">S</div>
+          <div class="review-meta"><div class="review-name">Sabrina Rabihi</div><div class="review-info">12 avis</div></div>
+        </div>
+        <div class="review-stars">
+          <i data-lucide="star" style="width:14px;height:14px;fill:var(--star);color:var(--star)"></i><i data-lucide="star" style="width:14px;height:14px;fill:var(--star);color:var(--star)"></i><i data-lucide="star" style="width:14px;height:14px;fill:var(--star);color:var(--star)"></i><i data-lucide="star" style="width:14px;height:14px;fill:var(--star);color:var(--star)"></i><i data-lucide="star" style="width:14px;height:14px;fill:var(--star);color:var(--star)"></i>
+        </div>
+        <div class="review-text">Équipe très professionnelle. Je recommande vivement. Toute ma famille (3 enfants mon époux et moi-même) avons fait nos semelles. Un suivi de qualité et une prise en charge remarquable.</div>
+        <div class="review-date"><i data-lucide="calendar" style="width:12px;vertical-align:middle;margin-right:4px"></i> Juillet 2022</div>
+      </div>
+
+      <div class="review-card positive">
+        <div class="review-header">
+          <div class="review-avatar" style="background:linear-gradient(135deg,#0984e3,#74b9ff)">I</div>
+          <div class="review-meta"><div class="review-name">Isabelle Doye</div><div class="review-info">3 avis</div></div>
+        </div>
+        <div class="review-stars">
+          <i data-lucide="star" style="width:14px;height:14px;fill:var(--star);color:var(--star)"></i><i data-lucide="star" style="width:14px;height:14px;fill:var(--star);color:var(--star)"></i><i data-lucide="star" style="width:14px;height:14px;fill:var(--star);color:var(--star)"></i><i data-lucide="star" style="width:14px;height:14px;fill:var(--star);color:var(--star)"></i><i data-lucide="star" style="width:14px;height:14px;fill:var(--star);color:var(--star)"></i>
+        </div>
+        <div class="review-text">Personnel agréable et compétent. Les semelles orthopédiques réalisées sur mesure pour ma fille sont parfaites, elle les a très vite acceptées et adoptées. Merci pour elle.</div>
+        <div class="review-date"><i data-lucide="calendar" style="width:12px;vertical-align:middle;margin-right:4px"></i> Juillet 2019</div>
+      </div>
+
+      <div class="review-card positive">
+        <div class="review-header">
+          <div class="review-avatar" style="background:linear-gradient(135deg,#e17055,#fab1a0)">J</div>
+          <div class="review-meta"><div class="review-name">Jonathan A</div><div class="review-info">8 avis</div></div>
+        </div>
+        <div class="review-stars">
+          <i data-lucide="star" style="width:14px;height:14px;fill:var(--star);color:var(--star)"></i><i data-lucide="star" style="width:14px;height:14px;fill:var(--star);color:var(--star)"></i><i data-lucide="star" style="width:14px;height:14px;fill:var(--star);color:var(--star)"></i><i data-lucide="star" style="width:14px;height:14px;fill:var(--star);color:var(--star)"></i><i data-lucide="star" style="width:14px;height:14px;fill:var(--star);color:var(--star)"></i>
+        </div>
+        <div class="review-text">Semelles au top. Je les porte tous les jours, à la fois au boulot et au sport. Très agréables à porter et faites de matériaux de très bonne qualité.</div>
+        <div class="review-date"><i data-lucide="calendar" style="width:12px;vertical-align:middle;margin-right:4px"></i> Novembre 2019</div>
+      </div>
+
+      <div class="review-card positive">
+        <div class="review-header">
+          <div class="review-avatar" style="background:linear-gradient(135deg,#00cec9,#81ecec)">M</div>
+          <div class="review-meta"><div class="review-name">Mouad</div><div class="review-info">1 avis</div></div>
+        </div>
+        <div class="review-stars">
+          <i data-lucide="star" style="width:14px;height:14px;fill:var(--star);color:var(--star)"></i><i data-lucide="star" style="width:14px;height:14px;fill:var(--star);color:var(--star)"></i><i data-lucide="star" style="width:14px;height:14px;fill:var(--star);color:var(--star)"></i><i data-lucide="star" style="width:14px;height:14px;fill:var(--star);color:var(--star)"></i><i data-lucide="star" style="width:14px;height:14px;fill:var(--star);color:var(--star)"></i>
+        </div>
+        <div class="review-text">Je suis passé hier dans ce cabinet pour des semelles orthopédiques. Le personnel est à l'écoute, sympathique. Je reviendrai pour mon renouvellement de semelle :)</div>
+        <div class="review-date"><i data-lucide="calendar" style="width:12px;vertical-align:middle;margin-right:4px"></i> Juin 2023</div>
+      </div>
+
+      <div class="review-card positive">
+        <div class="review-header">
+          <div class="review-avatar" style="background:linear-gradient(135deg,#636e72,#b2bec3)">C</div>
+          <div class="review-meta"><div class="review-name">Christophe Pasteur</div><div class="review-info">1 avis</div></div>
+        </div>
+        <div class="review-stars">
+          <i data-lucide="star" style="width:14px;height:14px;fill:var(--star);color:var(--star)"></i><i data-lucide="star" style="width:14px;height:14px;fill:var(--star);color:var(--star)"></i><i data-lucide="star" style="width:14px;height:14px;fill:var(--star);color:var(--star)"></i><i data-lucide="star" style="width:14px;height:14px;fill:var(--star);color:var(--star)"></i><i data-lucide="star" style="width:14px;height:14px;fill:var(--star);color:var(--star)"></i>
+        </div>
+        <div class="review-text">Vraiment compétent et rapide, je n'ai pas eu à attendre très longtemps avant de récupérer mon corset sur mesure. Personnel très sympathique.</div>
+        <div class="review-date"><i data-lucide="calendar" style="width:12px;vertical-align:middle;margin-right:4px"></i> Août 2019</div>
+      </div>
+
+      <div class="review-card positive">
+        <div class="review-header">
+          <div class="review-avatar" style="background:linear-gradient(135deg,#fdcb6e,#f39c12)">J</div>
+          <div class="review-meta"><div class="review-name">Jeremy Ftn</div><div class="review-info">16 avis</div></div>
+        </div>
+        <div class="review-stars">
+          <i data-lucide="star" style="width:14px;height:14px;fill:var(--star);color:var(--star)"></i><i data-lucide="star" style="width:14px;height:14px;fill:var(--star);color:var(--star)"></i><i data-lucide="star" style="width:14px;height:14px;fill:var(--star);color:var(--star)"></i><i data-lucide="star" style="width:14px;height:14px;fill:var(--star);color:var(--star)"></i><i data-lucide="star" style="width:14px;height:14px;fill:var(--star);color:var(--star)"></i>
+        </div>
+        <div class="review-text">Suite à une douleur au genou j'ai été suivi par Damien qui a su résoudre mon problème. Je recommande, excellent suivi et très bon travail.</div>
+        <div class="review-date"><i data-lucide="calendar" style="width:12px;vertical-align:middle;margin-right:4px"></i> Janvier 2023</div>
+      </div>
+
+      <div class="review-card positive">
+        <div class="review-header">
+          <div class="review-avatar" style="background:linear-gradient(135deg,#a29bfe,#6c5ce7)">H</div>
+          <div class="review-meta"><div class="review-name">Hakim Kebir</div><div class="review-info">Local Guide · 54 avis</div></div>
+        </div>
+        <div class="review-stars">
+          <i data-lucide="star" style="width:14px;height:14px;fill:var(--star);color:var(--star)"></i><i data-lucide="star" style="width:14px;height:14px;fill:var(--star);color:var(--star)"></i><i data-lucide="star" style="width:14px;height:14px;fill:var(--star);color:var(--star)"></i><i data-lucide="star" style="width:14px;height:14px;fill:var(--star);color:var(--star)"></i><i data-lucide="star" style="width:14px;height:14px;fill:var(--star);color:var(--star)"></i>
+        </div>
+        <div class="review-text">Nouvelle enseigne. Personnel jeune et dynamique. Un bon accueil et une équipe très professionnelle. Je le conseille fortement.</div>
+        <div class="review-date"><i data-lucide="calendar" style="width:12px;vertical-align:middle;margin-right:4px"></i> Juillet 2019</div>
+      </div>
+      
+      <div class="review-card positive">
+        <div class="review-header">
+          <div class="review-avatar" style="background:linear-gradient(135deg,#6c5ce7,#a29bfe)">C</div>
+          <div class="review-meta"><div class="review-name">Chloé THERAGE</div><div class="review-info">Local Guide · 13 avis</div></div>
+        </div>
+        <div class="review-stars">
+          <i data-lucide="star" style="width:14px;height:14px;fill:var(--star);color:var(--star)"></i><i data-lucide="star" style="width:14px;height:14px;fill:var(--star);color:var(--star)"></i><i data-lucide="star" style="width:14px;height:14px;fill:var(--star);color:var(--star)"></i><i data-lucide="star" style="width:14px;height:14px;fill:var(--star);color:var(--star)"></i><i data-lucide="star" style="width:14px;height:14px;fill:var(--star);color:var(--star)"></i>
+        </div>
+        <div class="review-text">Je consulte le Dr Doh depuis maintenant 3 ans et j'ai également eu l'occasion de voir son associé le Dr Salhorgne : que dire… à part un ÉNORME merci ! Je n'ai jamais été aussi bien prise en charge qu'ici, une attention de A à Z, un vrai suivi personnalisé et humain. Je recommande les yeux fermés !</div>
+        <div class="review-date"><i data-lucide="calendar" style="width:12px;vertical-align:middle;margin-right:4px"></i> Septembre 2024</div>
+      </div>
+
+      <div class="review-card positive">
+        <div class="review-header">
+          <div class="review-avatar" style="background:linear-gradient(135deg,#00b894,#55efc4)">R</div>
+          <div class="review-meta"><div class="review-name">Raph Raph</div><div class="review-info">Local Guide · 203 avis</div></div>
+        </div>
+        <div class="review-stars">
+          <i data-lucide="star" style="width:14px;height:14px;fill:var(--star);color:var(--star)"></i><i data-lucide="star" style="width:14px;height:14px;fill:var(--star);color:var(--star)"></i><i data-lucide="star" style="width:14px;height:14px;fill:var(--star);color:var(--star)"></i><i data-lucide="star" style="width:14px;height:14px;fill:var(--star);color:var(--star)"></i><i data-lucide="star" style="width:14px;height:14px;fill:var(--star);color:var(--star)"></i>
+        </div>
+        <div class="review-text">Un grand merci, praticien au top notamment pour mes deux filles, bien prises en charge pour des semelles orthopédiques. Un accueil souriant et de bonnes explications sur les étapes, cela permet aux enfants de "participer" et comprendre. Merci beaucoup !</div>
+        <div class="review-date"><i data-lucide="calendar" style="width:12px;vertical-align:middle;margin-right:4px"></i> Janvier 2023</div>
+      </div>
+
+      <div class="review-card positive">
+        <div class="review-header">
+          <div class="review-avatar" style="background:linear-gradient(135deg,#fd79a8,#e84393)">S</div>
+          <div class="review-meta"><div class="review-name">Sabrina Rabihi</div><div class="review-info">12 avis</div></div>
+        </div>
+        <div class="review-stars">
+          <i data-lucide="star" style="width:14px;height:14px;fill:var(--star);color:var(--star)"></i><i data-lucide="star" style="width:14px;height:14px;fill:var(--star);color:var(--star)"></i><i data-lucide="star" style="width:14px;height:14px;fill:var(--star);color:var(--star)"></i><i data-lucide="star" style="width:14px;height:14px;fill:var(--star);color:var(--star)"></i><i data-lucide="star" style="width:14px;height:14px;fill:var(--star);color:var(--star)"></i>
+        </div>
+        <div class="review-text">Équipe très professionnelle. Je recommande vivement. Toute ma famille (3 enfants mon époux et moi-même) avons fait nos semelles. Un suivi de qualité et une prise en charge remarquable.</div>
+        <div class="review-date"><i data-lucide="calendar" style="width:12px;vertical-align:middle;margin-right:4px"></i> Juillet 2022</div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+<div class="divider"><hr></div>
+
+<section id="horaires">
+  <div class="section-header anim"><span class="section-icon"><i data-lucide="clock" style="width:40px;height:40px;color:var(--primary)"></i></span><h2>Horaires d'ouverture</h2><p>Consultations sur rendez-vous</p></div>
+  <div class="horaires-card anim-s">
+    <div class="horaires-header"><h3><i data-lucide="calendar-days" style="width:18px;vertical-align:middle;margin-right:6px"></i> Horaires hebdomadaires</h3></div>
+    <div class="horaires-body">
+      <div class="horaire-row open"><span class="day"><i data-lucide="check-circle-2" style="width:14px;vertical-align:middle;margin-right:4px"></i> Mardi</span><span class="hours">09h30 – 13h30 · 14h30 – 19h30</span></div>
+      <div class="horaire-row open"><span class="day"><i data-lucide="check-circle-2" style="width:14px;vertical-align:middle;margin-right:4px"></i> Mercredi</span><span class="hours">09h30 – 13h30 · 14h30 – 19h30</span></div>
+      <div class="horaire-row open"><span class="day"><i data-lucide="check-circle-2" style="width:14px;vertical-align:middle;margin-right:4px"></i> Jeudi</span><span class="hours">09h30 – 13h30 · 14h30 – 19h30</span></div>
+      <div class="horaire-row open"><span class="day"><i data-lucide="check-circle-2" style="width:14px;vertical-align:middle;margin-right:4px"></i> Vendredi</span><span class="hours">09h30 – 13h30 · 14h30 – 19h30</span></div>
+    </div>
+  </div>
+  <p class="anim" style="text-align:center;margin-top:18px;font-size:.85rem;color:var(--text-light)"><i data-lucide="info" style="width:14px;vertical-align:middle"></i> Vous pouvez contacter votre soignant pour certaines demandes simples hors rendez-vous.</p>
+</section>
+
+<div class="divider"><hr></div>
+
+<section id="tarifs">
+  <div class="section-header anim"><span class="section-icon"><i data-lucide="banknote" style="width:40px;height:40px;color:var(--primary)"></i></span><h2>Tarifs</h2><p>Honoraires communiqués à titre indicatif</p></div>
+  <div class="tarifs-container">
+    <div class="tarif-card anim-l d1"><span class="emoji"><i data-lucide="baby" style="width:44px;height:44px;color:var(--primary)"></i></span><h3>Semelles orthopédiques enfants</h3><div class="tarif-price">120 €</div></div>
+    <div class="tarif-card anim-r d2"><span class="emoji"><i data-lucide="user" style="width:44px;height:44px;color:var(--primary)"></i></span><h3>Semelles orthopédiques adultes</h3><div class="tarif-price">160 €</div></div>
+  </div>
+  <div class="tarif-note anim"><i data-lucide="info" style="width:16px;vertical-align:middle;margin-right:4px"></i> Ces honoraires vous sont communiqués à titre indicatif par le soignant. Ils peuvent varier selon le type de soins finalement réalisés en cabinet, le nombre de consultations et les actes additionnels nécessaires. En cas de dépassement des tarifs, le soignant doit en avertir préalablement le patient.</div>
+  <div style="text-align:center;margin-top:32px" class="anim">
+    <p style="font-size:.95rem;font-weight:600;margin-bottom:14px">Moyens de paiement acceptés</p>
+    <div class="payment-methods">
+      <div class="payment-badge"><i data-lucide="credit-card" style="width:18px"></i> Carte bancaire</div>
+      <div class="payment-badge"><i data-lucide="file-signature" style="width:18px"></i> Chèques</div>
+      <div class="payment-badge"><i data-lucide="banknote" style="width:18px"></i> Espèces</div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"><hr></div>
+
+<section id="acces">
+  <div class="section-header anim"><span class="section-icon"><i data-lucide="map-pin" style="width:40px;height:40px;color:var(--primary)"></i></span><h2>Accès & informations pratiques</h2><p>Cabinet Jouy-le-Moutier</p></div>
+  <div class="map-container anim-s">
+  <iframe 
+        src="https://maps.google.com/maps?q=6%20All%C3%A9e%20de%20Jouy,%2095280%20Jouy-le-Moutier&t=&z=16&ie=UTF8&iwloc=&output=embed" 
+        width="100%" 
+        height="100%" 
+        style="border:0;" 
+        allowfullscreen="" 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  <div class="access-grid">
+    <div class="access-card anim-l">
+      <h3><i data-lucide="bus" style="width:20px;vertical-align:middle"></i> Transports en commun</h3>
+      <ul class="access-list">
+        <li><span class="ico"><i data-lucide="map-pin" style="width:16px"></i></span> Les Éguérets — lignes 48 et 30-27</li>
+        <li><span class="ico"><i data-lucide="map-pin" style="width:16px"></i></span> Les Eguerets — ligne 48B</li>
+        <li><span class="ico"><i data-lucide="map-pin" style="width:16px"></i></span> Les Jouannes — lignes 48, 14, 34 Sud et 30-27</li>
+      </ul>
+    </div>
+    <div class="access-card anim-r">
+      <h3><i data-lucide="accessibility" style="width:20px;vertical-align:middle"></i> Accessibilité</h3>
+      <ul class="access-list">
+        <li><span class="ico"><i data-lucide="building" style="width:16px"></i></span> Cabinet situé au rez-de-chaussée</li>
+        <li><span class="ico"><i data-lucide="door-open" style="width:16px"></i></span> Entrée accessible PMR</li>
+        <li><span class="ico"><i data-lucide="square-parking" style="width:16px"></i></span> Parking gratuit à proximité</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<div class="divider"><hr></div>
+
+<section id="contact">
+  <div class="section-header anim"><span class="section-icon"><i data-lucide="phone-call" style="width:40px;height:40px;color:var(--primary)"></i></span><h2>Contact</h2><p>Prenez rendez-vous ou contactez-nous</p></div>
+  
+  <div class="contact-grid">
+    <div class="contact-card anim-l">
+      <i data-lucide="phone" class="emoji-lg" style="width:42px;height:42px;color:var(--primary)"></i>
+      <h3>Téléphone cabinet</h3>
+      <p>01 30 30 66 86</p>
+    </div>
+    
+    <div class="contact-card anim">
+      <i data-lucide="mail" class="emoji-lg" style="width:42px;height:42px;color:var(--primary)"></i>
+      <h3>E-mail</h3>
+      <p style="font-size:1rem; word-break:break-word;">dsaorthopedie@gmail.com</p>
+    </div>
+
+    <div class="contact-card anim">
+      <i data-lucide="smartphone" class="emoji-lg" style="width:42px;height:42px;color:var(--primary)"></i>
+      <h3>Urgences</h3>
+      <p>06 66 46 11 50</p>
+      <p class="label">Portable personnel</p>
+    </div>
+
+    <a href="https://www.doctolib.fr/orthopediste-orthesiste/jouy-le-moutier/damien-salhorgne#location" target="_blank" rel="noopener noreferrer" class="contact-card contact-card-doctolib anim-r" style="text-decoration:none;">
+      <img src="picture/doctolib_logo.png" alt="Doctolib" class="emoji-lg" style="width:42px; height:42px; filter:brightness(0) invert(1); display:inline-block; margin-bottom:14px; transition:transform 0.4s;">
+      <h3>Prendre rendez-vous</h3>
+      <p>Sur Doctolib</p>
+    </a>
+  </div>
+
+  <div class="urgence-banner anim">
+    <h3><i data-lucide="alert-triangle" style="width:18px;vertical-align:middle;margin-right:6px"></i> Contact d'urgence</h3>
+    <p>En cas d'urgence, contactez le 06 66 46 11 50</p>
+  </div>
+</section>
+
+
+
+<footer>
+  <div class="footer-brand"><i data-lucide="footprints" style="width:24px;vertical-align:middle;margin-right:8px"></i> DSA Orthopédie</div>
+  <p>Damien Salhorgne — Orthopédiste · Orthésiste · Podologiste</p>
+  <p style="margin-top:4px">6 Allée de Jouy, 95280 Jouy-le-Moutier</p>
+  <p style="margin-top:18px;font-size:.78rem;opacity:.5">© 2026 DSA Orthopédie — Tous droits réservés</p>
+</footer>
+
+<button class="scroll-top" id="scrollTopBtn" onclick="scrollToTop()"><i data-lucide="arrow-up"></i></button>
+
+<script src="script.js"></script>
+<script>
+  lucide.createIcons();
+</script>
+
+</body>
+</html>
