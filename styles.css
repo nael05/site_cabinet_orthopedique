@@ -234,9 +234,71 @@ section { max-width:1100px; margin:0 auto; padding:70px 24px; }
 .contact-card p { font-size:1.1rem; color:var(--primary); font-weight:600; }
 .contact-card .label { font-size:.8rem; color:var(--text-light); font-weight:400; margin-top:4px; }
 
-.presentation-content { max-width:800px; margin:0 auto; }
-.presentation-card { background:var(--white); border-radius:var(--radius); box-shadow:var(--shadow); padding:36px; margin-bottom:28px; }
-.presentation-card p { font-size:.95rem; color:var(--text-light); line-height:1.8; }
+.presentation-content { max-width:850px; margin:0 auto; }
+
+.presentation-card { 
+  background: var(--white); 
+  border-radius: var(--radius); 
+  box-shadow: var(--shadow); 
+  padding: 36px; 
+  margin-bottom: 28px; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+
+
+
+.presentation-profile { 
+  text-align: center; 
+  flex-shrink: 0; 
+}
+
+.profile-img { 
+  width: 140px; 
+  height: 140px; 
+  border-radius: 50%; 
+  object-fit: cover; 
+  object-position: top;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08); 
+  border: 4px solid var(--primary-light); 
+  margin-bottom: 12px; 
+}
+
+.profile-name { 
+  font-size: 1.15rem; 
+  font-weight: 700; 
+  color: var(--text); 
+  margin-bottom: 4px; 
+}
+
+.profile-title { 
+  font-size: 0.95rem; 
+  color: var(--primary); 
+  font-weight: 600; 
+}
+
+.presentation-text { 
+  flex: 1; 
+}
+
+.presentation-text p { 
+  font-size: .95rem; 
+  color: var(--text-light); 
+  line-height: 1.8; 
+}
+
+@media(min-width: 768px) {
+  .presentation-card { 
+    flex-direction: row; 
+    align-items: center; 
+  }
+  .presentation-profile { 
+    border-right: 1px solid rgba(0,0,0,0.06); 
+    padding-right: 32px; 
+  }
+}
 .info-chips { display:flex; flex-wrap:wrap; gap:10px; margin-top:22px; }
 .chip { display:inline-flex; align-items:center; gap:6px; background:var(--primary-light); color:var(--primary); padding:8px 16px; border-radius:50px; font-size:.82rem; font-weight:500; transition:all .3s; }
 .chip:hover { transform:translateY(-2px); box-shadow:0 4px 8px rgba(24, 47, 115, 0.15); }
