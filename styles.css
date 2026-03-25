@@ -207,7 +207,7 @@ section { max-width:1100px; margin:0 auto; padding:70px 24px; }
 .review-name { font-weight:600; font-size:.92rem; color:var(--text); }
 .review-info { font-size:.75rem; color:var(--text-light); }
 .review-stars { margin-bottom:10px; display:flex; gap:2px; }
-.review-text { font-size:.87rem; color:var(--text-light); line-height:1.7; display:-webkit-box; -webkit-line-clamp:5; -webkit-box-orient:vertical; overflow:hidden; }
+.review-text { font-size:.87rem; color:var(--text-light); line-height:1.7; display:-webkit-box; -webkit-box-orient:vertical; overflow:hidden; }
 .review-date { font-size:.75rem; color:var(--text-light); margin-top:12px; opacity:.7; display:flex; align-items:center; }
 .review-card.positive { border-top:3px solid var(--accent); }
 .review-card.negative { border-top:3px solid #e74c3c; }
@@ -354,7 +354,6 @@ footer p { font-size:.85rem; line-height:1.7; }
   .review-card{min-width:260px;max-width:290px;padding:20px}
 }
 
-/* Style spécifique pour la carte Doctolib dans la section contact */
 .contact-card.contact-card-doctolib {
   background: #0596DE; /* Bleu Doctolib */
   color: white;
@@ -371,15 +370,55 @@ footer p { font-size:.85rem; line-height:1.7; }
   opacity: 0.9;
 }
 
-/* Garder l'animation de l'icône au survol */
 .contact-card.contact-card-doctolib:hover img {
   transform: scale(1.2) rotate(10deg);
 }
 
-/* Assurer un beau rendu de la grille avec 4 éléments */
 @media(min-width: 900px) {
   .contact-grid {
-    grid-template-columns: repeat(2, 1fr); /* Crée un beau carré 2x2 sur grand écran */
+    grid-template-columns: repeat(2, 1fr);
     max-width: 900px;
   }
+}
+
+
+.cards-grid .card-bg-image {
+  background-image: url('image_88e4a8.png'); 
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat;
+  
+  color: white !important; 
+  text-decoration: none;
+  
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;    
+  text-align: left;       
+  
+  min-height: 120px; 
+  padding: 20px;
+  
+  overflow: hidden; 
+  position: relative;
+  z-index: 1;
+}
+
+.cards-grid .card-bg-image h3 {
+  margin: 0;
+  color: white !important;
+  font-size: 1.15rem;
+  
+  text-shadow: 0 2px 4px rgba(0,0,0,0.6); 
+  position: relative;
+  z-index: 2;
+}
+
+.cards-grid .card-bg-image::after {
+  display: none; 
+}
+
+.cards-grid .card-bg-image:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-hover);
 }
