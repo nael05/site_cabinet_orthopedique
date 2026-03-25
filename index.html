@@ -45,19 +45,25 @@
 </nav>
 
 <div class="mobile-menu" id="mobileMenu">
-  <a href="#presentation" onclick="closeMenu()"><i data-lucide="building-2" style="width:18px;vertical-align:middle;margin-right:8px"></i> Présentation</a>
-  <a href="#chiffres" onclick="closeMenu()"><i data-lucide="bar-chart-3" style="width:18px;vertical-align:middle;margin-right:8px"></i> Chiffres clés</a>
-  <a href="#expertises" onclick="closeMenu()"><i data-lucide="stethoscope" style="width:18px;vertical-align:middle;margin-right:8px"></i> Expertises</a>
-  <a href="orthesie.html" onclick="closeMenu()" style="padding-left: 40px; font-size: 0.95rem; opacity: 0.8;">- Orthésie</a>
-  <a href="podologie.html" onclick="closeMenu()" style="padding-left: 40px; font-size: 0.95rem; opacity: 0.8;">- Podologie</a>
-  <a href="lymphologie.html" onclick="closeMenu()" style="padding-left: 40px; font-size: 0.95rem; opacity: 0.8;">- Lymphologie</a>
-  <a href="ceinturee_et_corset.html" onclick="closeMenu()" style="padding-left: 40px; font-size: 0.95rem; opacity: 0.8;">- Ceintures et Corsets</a>
-  <a href="masque_de_protection.html" onclick="closeMenu()" style="padding-left: 40px; font-size: 0.95rem; opacity: 0.8;">- Masques de protection</a>
-  <a href="#avis" onclick="closeMenu()"><i data-lucide="star" style="width:18px;vertical-align:middle;margin-right:8px"></i> Avis clients</a>
-  <a href="#horaires" onclick="closeMenu()"><i data-lucide="clock" style="width:18px;vertical-align:middle;margin-right:8px"></i> Horaires</a>
-  <a href="#tarifs" onclick="closeMenu()"><i data-lucide="banknote" style="width:18px;vertical-align:middle;margin-right:8px"></i> Tarifs</a>
-  <a href="#acces" onclick="closeMenu()"><i data-lucide="map-pin" style="width:18px;vertical-align:middle;margin-right:8px"></i> Accès</a>
-  <a href="#contact" onclick="closeMenu()"><i data-lucide="phone" style="width:18px;vertical-align:middle;margin-right:8px"></i> Contact</a>
+  <a href="index.html#presentation" onclick="closeMenu()"><i data-lucide="building-2" style="width:18px;margin-right:8px"></i> Présentation</a>
+  
+  <div class="mobile-dropdown">
+    <button class="mobile-dropdown-toggle" onclick="toggleMobileDropdown()">
+      <div style="display:flex; align-items:center;">
+        <i data-lucide="stethoscope" style="width:18px;margin-right:8px"></i> Nos actes
+      </div>
+      <i data-lucide="chevron-down" class="chevron-icon" style="width:18px"></i>
+    </button>
+    <div class="mobile-dropdown-content" id="mobileDropdownContent">
+      <a href="orthesie.html" onclick="closeMenu()">Orthésie</a>
+      <a href="podologie.html" onclick="closeMenu()">Podologie</a>
+      <a href="lymphologie.html" onclick="closeMenu()">Lymphologie</a>
+      <a href="ceinturee_et_corset.html" onclick="closeMenu()">Ceintures et Corsets</a>
+      <a href="masque_de_protection.html" onclick="closeMenu()">Masques de protection</a>
+    </div>
+  </div>
+  <a href="index.html#tarifs" onclick="closeMenu()"><i data-lucide="banknote" style="width:18px;margin-right:8px"></i> Tarifs</a>
+  <a href="index.html#acces" onclick="closeMenu()"><i data-lucide="map-pin" style="width:18px;margin-right:8px"></i> Accès</a>
 </div>
 
 <section class="hero" style="max-width:100%">
@@ -71,7 +77,7 @@
         <img src="picture/doctolib_logo.png" alt="Doctolib" style="width: 20px; height: 20px; filter: brightness(0) invert(1); margin-right: 8px; vertical-align: middle;">
         Prendre rendez-vous
       </a>
-      <a href="#expertises" class="btn btn-outline"><i data-lucide="search" style="width:18px"></i> Découvrir nos soins</a>
+      <a href="Nos actes" class="btn btn-outline"><i data-lucide="search" style="width:18px"></i> Découvrir nos soins</a>
     </div>
   </div>
 </section>

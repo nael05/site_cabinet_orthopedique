@@ -90,3 +90,16 @@ window.addEventListener('scroll',()=>{
     p.style.transform=`translateY(${s*(0.1+i*0.05)}px)`;
   });
 });
+
+function toggleMobileDropdown() {
+  const content = document.getElementById('mobileDropdownContent');
+  const toggleBtn = document.querySelector('.mobile-dropdown-toggle');
+  
+  if (content.style.maxHeight) {
+    content.style.maxHeight = null;
+    toggleBtn.classList.remove('active');
+  } else {
+    content.style.maxHeight = content.scrollHeight + "px";
+    toggleBtn.classList.add('active');
+  }
+}

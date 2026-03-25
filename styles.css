@@ -793,3 +793,65 @@ section { max-width:1100px; margin:0 auto; padding:70px 24px; }
   color: var(--primary) !important;
   padding-left: 30px; 
 }
+
+/* ================= VRAI MENU DÉROULANT MOBILE ================= */
+.mobile-dropdown {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.mobile-dropdown-toggle {
+  background: transparent;
+  border: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 16px 18px;
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: var(--text);
+  cursor: pointer;
+  border-radius: var(--radius-sm);
+  transition: all 0.25s;
+  font-family: inherit;
+  animation: fadeInLeft .4s ease both .1s;
+}
+
+.mobile-dropdown-toggle .chevron-icon {
+  transition: transform 0.3s ease;
+}
+
+.mobile-dropdown-toggle:hover, 
+.mobile-dropdown-toggle.active {
+  background: var(--primary-light);
+  color: var(--primary);
+}
+
+.mobile-dropdown-toggle.active .chevron-icon {
+  transform: rotate(180deg);
+}
+
+.mobile-dropdown-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease-out;
+  background: rgba(0, 0, 0, 0.02);
+  border-radius: 8px;
+  margin: 0 10px;
+}
+
+.mobile-dropdown-content a {
+  padding: 12px 18px 12px 42px; 
+  font-size: 0.95rem;
+  opacity: 0.85;
+  animation: none !important; 
+}
+
+.mobile-dropdown-content a:hover {
+  opacity: 1;
+  background: transparent;
+  color: var(--primary);
+  padding-left: 48px; 
+}
