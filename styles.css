@@ -174,18 +174,72 @@ section { max-width:1100px; margin:0 auto; padding:70px 24px; }
 .access-list li:hover { color:var(--text); transform:translateX(4px); }
 .access-list li .ico { flex-shrink:0; margin-top:1px; display:flex; }
 
-/* --- Nouveaux styles pour la carte Google Maps --- */
+/* ================= CONSENTEMENT CARTE GOOGLE MAPS ================= */
 .map-container { 
   border-radius: var(--radius); 
-  height: 280px; /* Vous pouvez ajuster la hauteur ici */
+  height: 350px; /* Un peu plus grand pour bien voir le texte */
   margin-bottom: 24px; 
   position: relative; 
   overflow: hidden; 
   box-shadow: var(--shadow);
-  transform: translateZ(0); /* Force l'arrondi sur certains navigateurs (Safari) */
+  background: #e2e8f0; /* Fond gris clair avant chargement */
+  transform: translateZ(0);
 }
 
-.map-container iframe {
+.map-consent-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 24px;
+  z-index: 10;
+  transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+.map-consent-overlay h3 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 8px;
+}
+
+.map-consent-overlay p {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  margin-bottom: 20px;
+  max-width: 450px;
+  line-height: 1.6;
+}
+
+.map-consent-overlay button {
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s;
+  font-family: inherit;
+}
+
+.map-consent-overlay button:hover {
+  background: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(24, 47, 115, 0.25);
+}
+
+#googleMapIframe {
   width: 100%;
   height: 100%;
   border: none;

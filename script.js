@@ -103,3 +103,35 @@ function toggleMobileDropdown() {
     toggleBtn.classList.add('active');
   }
 }
+
+// ==========================================
+// GESTION DU CONSENTEMENT GOOGLE MAPS (RGPD)
+// ==========================================
+document.addEventListener('DOMContentLoaded', () => {
+  const mapConsent = localStorage.getItem('googleMapsConsent');
+  const iframe = document.getElementById('googleMapIframe');
+  const overlay = document.getElementById('mapConsentOverlay');
+
+  if (mapConsent === 'true' && iframe && overlay) {
+    iframe.src = iframe.getAttribute('data-src');
+    overlay.style.display = 'none';
+  }
+});
+
+function acceptMapCookies() {
+  const iframe = document.getElementById('googleMapIframe');
+  const overlay = document.getElementById('mapConsentOverlay');
+
+  if (iframe && overlay) {
+    iframe.src = iframe.getAttribute('data-src');
+    
+    overlay.style.opacity = '0';
+    overlay.style.visibility = 'hidden';
+    
+    localStorage.setItem('googleMapsConsent', 'true');
+    
+    if(typeof lucide !== 'undefined') {
+      lucide.createIcons();
+    }
+  }
+}
