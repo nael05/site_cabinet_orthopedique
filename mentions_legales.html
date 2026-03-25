@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mentions Légales - DSA Orthopédie</title>
+  
+  <link rel="icon" type="image/png" href="picture/logo.png">
+  <link rel="stylesheet" href="styles.css">
+  
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo">
+      <img src="picture/logo.png" alt="Logo DSA Orthopédie" class="nav-logo-img">
+      DSA Orthopédie
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html#presentation">Présentation</a></li>
+      <li><a href="index.html#chiffres">Chiffres</a></li>
+      <li><a href="index.html#expertises">Expertises</a></li>
+      <li><a href="index.html#avis">Avis</a></li>
+      <li><a href="index.html#horaires">Horaires</a></li>
+      <li><a href="index.html#tarifs">Tarifs</a></li>
+      <li><a href="index.html#acces">Accès</a></li>
+      <li><a href="index.html#partenaires">Partenaires</a></li>
+    </ul>
+    <button class="hamburger" onclick="toggleMenu()" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html#presentation" onclick="closeMenu()"><i data-lucide="building-2"></i> Présentation</a>
+  <a href="index.html#expertises" onclick="closeMenu()"><i data-lucide="stethoscope"></i> Expertises</a>
+  <a href="index.html#tarifs" onclick="closeMenu()"><i data-lucide="banknote"></i> Tarifs</a>
+  <a href="index.html#acces" onclick="closeMenu()"><i data-lucide="map-pin"></i> Accès</a>
+</div>
+
+<section class="legal-container anim">
+  <div class="section-header">
+    <span class="section-icon"><i data-lucide="scale" style="width:40px;height:40px;color:var(--primary)"></i></span>
+    <h1 class="legal-main-title">Mentions Légales</h1>
+    <p>Politique de confidentialité et conditions d'utilisation</p>
+  </div>
+
+  <div class="legal-content">
+    <h2>1. Éditeur du site</h2>
+    <p>Le site est édité par :</p>
+    <ul>
+      <li><strong>Propriétaire :</strong> Damien Salhorgne – Orthopédiste, Orthésiste, Podologiste</li>
+      <li><strong>Statut juridique :</strong> <span class="highlight-hole">[Indépendant / EI / SELARL...]</span></li>
+      <li><strong>Adresse du cabinet :</strong> 6 Allée de Jouy, 95280 Jouy-le-Moutier</li>
+      <li><strong>Téléphone :</strong> 01 30 30 66 86</li>
+      <li><strong>E-mail :</strong> dsaorthopedie@gmail.com</li>
+      <li><strong>SIRET :</strong> 84513766000013</li>
+      <li><strong>Numéro RPPS / ADELI :</strong> <span class="highlight-hole">[À COMPLÉTER]</span></li>
+    </ul>
+    <p><strong>Directeur de la publication :</strong> Damien Salhorgne</p>
+
+    <h2>2. Conception et Développement</h2>
+    <p>Le design et le développement technique du site ont été réalisés par :</p>
+    <ul>
+      <li><strong>Prestataire :</strong> NM Web Studio</li>
+      <li><strong>SIRET :</strong> 10056302200019</li>
+      <li><strong>Site web :</strong> nm-web-studio.fr</li>
+
+    </ul>
+
+    <h2>3. Hébergement du site</h2>
+    <p>Le site est hébergé par la société <strong>o2switch</strong> :</p>
+    <ul>
+      <li><strong>Adresse :</strong> Chemin des Pardiaux, 63000 Clermont-Ferrand</li>
+      <li><strong>Téléphone :</strong> 04 44 44 60 40</li>
+      <li><strong>Site web :</strong> https://www.o2switch.fr/</li>
+    </ul>
+
+    <h2>4. Propriété intellectuelle</h2>
+    <p>L’ensemble du contenu présent sur ce site (textes, images, graphismes, logo, icônes, etc.) est la propriété exclusive de Damien Salhorgne, à l'exception des marques ou contenus appartenant à d'autres sociétés partenaires (ex: Doctolib, NM Web Studio, Lucide Icons).</p>
+    <p>Toute reproduction, distribution ou modification, même partielle, est strictement interdite sans l'accord exprès par écrit de l'éditeur.</p>
+
+    <h2 id="confidentialite">5. Protection des données (RGPD)</h2>
+    <p>Ce site est une vitrine d'information. Les prises de rendez-vous sont gérées par la plateforme <strong>Doctolib</strong>. Le cabinet DSA Orthopédie ne collecte pas directement de données personnelles via ce site web.</p>
+    <p>Conformément au RGPD, vous disposez d’un droit d’accès, de rectification ou d'effacement de vos données en contactant le cabinet par e-mail ou courrier.</p>
+
+    <h2>6. Médiation à la consommation</h2>
+    <p>En cas de litige non résolu directement avec le cabinet, le patient peut recourir à un médiateur de la consommation :</p>
+    <ul>
+      <li><strong>Médiateur :</strong> <span class="highlight-hole">[NOM DE L'ENTITÉ DE MÉDIATION]</span></li>
+      <li><strong>Adresse :</strong> <span class="highlight-hole">[ADRESSE DU MÉDIATEUR]</span></li>
+    </ul>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-col footer-about">
+      <div class="footer-brand">
+        <i data-lucide="footprints" style="width:28px; height:28px; color:var(--accent);"></i>
+        DSA Orthopédie
+      </div>
+      <p class="footer-desc">
+        Damien Salhorgne<br>
+        <strong>Orthopédiste · Orthésiste · Podologiste</strong>
+      </p>
+      <div class="footer-contact-info">
+        <p><i data-lucide="map-pin"></i> 6 Allée de Jouy, 95280 Jouy-le-Moutier</p>
+        <p><i data-lucide="phone"></i> 01 30 30 66 86</p>
+        <p><i data-lucide="mail"></i> dsaorthopedie@gmail.com</p>
+      </div>
+      <a href="https://www.doctolib.fr/orthopediste-orthesiste/jouy-le-moutier/damien-salhorgne#location" target="_blank" rel="noopener noreferrer" class="btn-doctolib-footer">
+        <img src="picture/doctolib_logo.png" alt="Doctolib" style="width:16px; height:16px; filter:brightness(0) invert(1);">
+        Prendre RDV en ligne
+      </a>
+    </div>
+
+    <div class="footer-col">
+      <h3>Le Cabinet</h3>
+      <ul class="footer-links">
+        <li><a href="index.html#presentation">Présentation</a></li>
+        <li><a href="index.html#expertises">Nos expertises</a></li>
+        <li><a href="index.html#avis">Avis patients</a></li>
+        <li><a href="index.html#tarifs">Tarifs & Remboursements</a></li>
+        <li><a href="index.html#acces">Accès au cabinet</a></li>
+        <li><a href="index.html#partenaires">Nos partenaires</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h3>Nos Actes</h3>
+      <ul class="footer-links">
+        <li><a href="orthesie.html">Orthésie</a></li>
+        <li><a href="podologie.html">Podologie</a></li>
+        <li><a href="lymphologie.html">Lymphologie</a></li>
+        <li><a href="ceinturee_et_corset.html">Ceintures et Corsets</a></li>
+        <li><a href="masque_de_protection.html">Masques de protection</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h3>Horaires</h3>
+      <ul class="footer-hours">
+        <li><span>Mardi</span> <span>09h30 - 19h30</span></li>
+        <li><span>Mercredi</span> <span>09h30 - 19h30</span></li>
+        <li><span>Jeudi</span> <span>09h30 - 19h30</span></li>
+        <li><span>Vendredi</span> <span>09h30 - 19h30</span></li>
+        <li><span style="opacity: 0.6;">Sam - Lun</span> <span style="opacity: 0.6;">Fermé</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="footer-bottom-inner">
+      <p>© 2026 DSA Orthopédie — Tous droits réservés.</p>
+      <div class="footer-legal-links">
+        <a href="mentions_legales.html">Mentions légales</a>
+        <span class="separator">|</span>
+        <a href="mentions_legales.html#confidentialite">Politique de confidentialité</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<button class="scroll-top" id="scrollTopBtn" onclick="scrollToTop()"><i data-lucide="arrow-up"></i></button>
+
+<script src="script.js"></script>
+<script>
+  // Initialisation des icônes Lucide sur cette page
+  lucide.createIcons();
+</script>
+
+</body>
+</html>

@@ -19,15 +19,27 @@
       DSA Orthopédie
     </a>
     <ul class="nav-links">
-      <li><a href="#presentation">Présentation</a></li>
-      <li><a href="#chiffres">Chiffres</a></li>
-      <li><a href="#expertises">Expertises</a></li>
-      <li><a href="#avis">Avis</a></li>
-      <li><a href="#horaires">Horaires</a></li>
-      <li><a href="#tarifs">Tarifs</a></li>
-      <li><a href="#acces">Accès</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
+  <li><a href="index.html#presentation">Présentation</a></li>
+  <li><a href="index.html#chiffres">Chiffres</a></li>
+  
+  <li class="dropdown">
+    <a href="index.html#expertises" class="dropdown-toggle">
+      Nos actes <i data-lucide="chevron-down" style="width:14px; margin-left:2px;"></i>
+    </a>
+    <ul class="dropdown-menu">
+            <li><a href="orthesie.html">Orthésie</a></li>
+            <li><a href="podologie.html">Podologie</a></li>
+            <li><a href="lymphologie.html">Lymphologie</a></li>
+            <li><a href="ceinturee_et_corset.html">Ceintures et Corsets</a></li>
+            <li><a href="masque_de_protection.html">Masques de protection</a></li>
+          </ul>
+        </li>
+        <li><a href="index.html#avis">Avis</a></li>
+        <li><a href="index.html#horaires">Horaires</a></li>
+        <li><a href="index.html#tarifs">Tarifs</a></li>
+        <li><a href="index.html#acces">Accès</a></li>
+        <li><a href="index.html#partenaires">Partenaires</a></li>
+      </ul>
     <button class="hamburger" onclick="toggleMenu()" aria-label="Menu"><span></span><span></span><span></span></button>
   </div>
 </nav>
@@ -36,6 +48,11 @@
   <a href="#presentation" onclick="closeMenu()"><i data-lucide="building-2" style="width:18px;vertical-align:middle;margin-right:8px"></i> Présentation</a>
   <a href="#chiffres" onclick="closeMenu()"><i data-lucide="bar-chart-3" style="width:18px;vertical-align:middle;margin-right:8px"></i> Chiffres clés</a>
   <a href="#expertises" onclick="closeMenu()"><i data-lucide="stethoscope" style="width:18px;vertical-align:middle;margin-right:8px"></i> Expertises</a>
+  <a href="orthesie.html" onclick="closeMenu()" style="padding-left: 40px; font-size: 0.95rem; opacity: 0.8;">- Orthésie</a>
+  <a href="podologie.html" onclick="closeMenu()" style="padding-left: 40px; font-size: 0.95rem; opacity: 0.8;">- Podologie</a>
+  <a href="lymphologie.html" onclick="closeMenu()" style="padding-left: 40px; font-size: 0.95rem; opacity: 0.8;">- Lymphologie</a>
+  <a href="ceinturee_et_corset.html" onclick="closeMenu()" style="padding-left: 40px; font-size: 0.95rem; opacity: 0.8;">- Ceintures et Corsets</a>
+  <a href="masque_de_protection.html" onclick="closeMenu()" style="padding-left: 40px; font-size: 0.95rem; opacity: 0.8;">- Masques de protection</a>
   <a href="#avis" onclick="closeMenu()"><i data-lucide="star" style="width:18px;vertical-align:middle;margin-right:8px"></i> Avis clients</a>
   <a href="#horaires" onclick="closeMenu()"><i data-lucide="clock" style="width:18px;vertical-align:middle;margin-right:8px"></i> Horaires</a>
   <a href="#tarifs" onclick="closeMenu()"><i data-lucide="banknote" style="width:18px;vertical-align:middle;margin-right:8px"></i> Tarifs</a>
@@ -562,10 +579,10 @@
   <div class="access-grid">
     <div class="access-card anim-l">
       <h3><i data-lucide="bus" style="width:20px;vertical-align:middle"></i> Transports en commun</h3>
-      <ul class="access-list">
-        <li><span class="ico"><i data-lucide="map-pin" style="width:16px"></i></span> Les Éguérets — lignes 48 et 30-27</li>
-        <li><span class="ico"><i data-lucide="map-pin" style="width:16px"></i></span> Les Eguerets — ligne 48B</li>
-        <li><span class="ico"><i data-lucide="map-pin" style="width:16px"></i></span> Les Jouannes — lignes 48, 14, 34 Sud et 30-27</li>
+     <ul class="access-list">
+        <li><span class="ico"><i data-lucide="bus" style="width:16px"></i></span> Les Éguérets — lignes 1203 et 1207</li>
+        <li><span class="ico"><i data-lucide="bus" style="width:16px"></i></span> Les Jouannes — lignes 1203, 1207 et 1210</li>
+        <li><span class="ico"><i data-lucide="bus" style="width:16px"></i></span> Le Stade — lignes 1203 et 1207</li>
       </ul>
     </div>
     <div class="access-card anim-r">
@@ -657,11 +674,75 @@
   </div>
 </section>
 
-<footer>
-  <div class="footer-brand"><i data-lucide="footprints" style="width:24px;vertical-align:middle;margin-right:8px"></i> DSA Orthopédie</div>
-  <p>Damien Salhorgne — Orthopédiste · Orthésiste · Podologiste</p>
-  <p style="margin-top:4px">6 Allée de Jouy, 95280 Jouy-le-Moutier</p>
-  <p style="margin-top:18px;font-size:.78rem;opacity:.5">© 2026 DSA Orthopédie — Tous droits réservés</p>
+<footer class="site-footer">
+  <div class="footer-container">
+    
+    <div class="footer-col footer-about">
+      <div class="footer-brand">
+        <i data-lucide="footprints" style="width:28px; height:28px; color:var(--accent);"></i>
+        DSA Orthopédie
+      </div>
+      <p class="footer-desc">
+        Damien Salhorgne<br>
+        <strong>Orthopédiste · Orthésiste · Podologiste</strong>
+      </p>
+      <div class="footer-contact-info">
+        <p><i data-lucide="map-pin"></i> 6 Allée de Jouy, 95280 Jouy-le-Moutier</p>
+        <p><i data-lucide="phone"></i> 01 30 30 66 86</p>
+        <p><i data-lucide="mail"></i> dsaorthopedie@gmail.com</p>
+      </div>
+      <a href="https://www.doctolib.fr/orthopediste-orthesiste/jouy-le-moutier/damien-salhorgne#location" target="_blank" rel="noopener noreferrer" class="btn-doctolib-footer">
+        <img src="picture/doctolib_logo.png" alt="Doctolib" style="width:16px; height:16px; filter:brightness(0) invert(1);">
+        Prendre RDV en ligne
+      </a>
+    </div>
+
+    <div class="footer-col">
+      <h3>Le Cabinet</h3>
+      <ul class="footer-links">
+        <li><a href="#presentation" onclick="scrollToTop()">Présentation</a></li>
+        <li><a href="#expertises">Nos expertises</a></li>
+        <li><a href="#avis">Avis patients</a></li>
+        <li><a href="#tarifs">Tarifs & Remboursements</a></li>
+        <li><a href="#acces">Accès au cabinet</a></li>
+        <li><a href="#partenaires">Nos partenaires</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h3>Nos Soins</h3>
+      <ul class="footer-links">
+        <li><a href="orthesie.html">Orthésie</a></li>
+        <li><a href="podologie.html">Podologie</a></li>
+        <li><a href="lymphologie.html">Lymphologie</a></li>
+        <li><a href="ceinturee_et_corset.html">Ceintures et Corsets</a></li>
+        <li><a href="masque_de_protection.html">Masques de protection</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h3>Horaires</h3>
+      <ul class="footer-hours">
+        <li><span>Mardi</span> <span>09h30 - 19h30</span></li>
+        <li><span>Mercredi</span> <span>09h30 - 19h30</span></li>
+        <li><span>Jeudi</span> <span>09h30 - 19h30</span></li>
+        <li><span>Vendredi</span> <span>09h30 - 19h30</span></li>
+        <li><span style="opacity: 0.6;">Sam - Lun</span> <span style="opacity: 0.6;">Fermé</span></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="footer-bottom">
+    <div class="footer-bottom-inner">
+      <p>© 2026 DSA Orthopédie — Tous droits réservés.</p>
+      <div class="footer-legal-links">
+        <a href="mentions_legales.html">Mentions légales</a>
+        <span class="separator">|</span>
+        <a href="mentions_legales.html#confidentialite">Politique de confidentialité</a>
+      </div>
+    </div>
+  </div>
 </footer>
 
 <button class="scroll-top" id="scrollTopBtn" onclick="scrollToTop()"><i data-lucide="arrow-up"></i></button>
