@@ -909,3 +909,156 @@ section { max-width:1100px; margin:0 auto; padding:70px 24px; }
   color: var(--primary);
   padding-left: 48px; 
 }
+
+/* ================= STYLES SPÉCIFIQUES POUR LES PAGES DE SOINS ================= */
+.active-dropdown {
+  color: var(--primary) !important;
+  font-weight: 600 !important;
+}
+
+.active-sublink {
+  color: var(--primary) !important;
+  background: var(--primary-light) !important;
+  font-weight: 600 !important;
+  padding-left: 30px !important;
+}
+
+.service-hero {
+  background: linear-gradient(rgba(24, 47, 115, 0.9), rgba(24, 47, 115, 0.8)), url('picture/cabinet_exterieur.webp');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  padding: 80px 24px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.service-hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.service-hero h1 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  margin-bottom: 16px;
+  letter-spacing: -0.5px;
+}
+
+.service-hero p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  line-height: 1.6;
+}
+
+/* Grille Image / Texte */
+.service-block {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+@media(min-width: 900px) {
+  .service-block {
+    flex-direction: row;
+    align-items: center;
+    gap: 50px;
+  }
+  .service-block.reverse-layout {
+    flex-direction: row-reverse;
+  }
+  .service-text { flex: 1.2; }
+  .service-image-box { flex: 1; }
+}
+
+.service-text h2 {
+  color: var(--text);
+  margin-bottom: 20px;
+  font-size: 1.7rem;
+  font-weight: 700;
+}
+
+.service-text p {
+  color: var(--text-light);
+  line-height: 1.7;
+  margin-bottom: 16px;
+  font-size: 1rem;
+}
+
+.service-img {
+  width: 100%;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  object-fit: cover;
+  height: auto;
+  max-height: 400px;
+  border: 1px solid rgba(0,0,0,0.05);
+}
+
+/* Grille des pathologies */
+.pathology-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.pathology-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  background: var(--white);
+  padding: 12px 16px;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(0,0,0,0.06);
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+}
+
+.pathology-item .lucide {
+  color: var(--accent);
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+/* Bannière d'Appel à l'action (Doctolib) */
+.cta-banner {
+  background: var(--primary-light);
+  border: 1px solid rgba(40, 75, 175, 0.15);
+  border-radius: var(--radius);
+  padding: 40px 24px;
+  text-align: center;
+}
+
+.cta-banner-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.cta-banner h3 {
+  font-size: 1.6rem;
+  color: var(--primary);
+  margin-bottom: 16px;
+}
+
+.cta-banner p {
+  color: var(--text);
+  margin-bottom: 24px;
+  line-height: 1.6;
+}
+
+.cta-btn {
+  display: inline-flex;
+  justify-content: center;
+}
+
+@media(max-width: 768px) {
+  .service-hero h1 { font-size: 2rem; }
+  .service-text h2 { font-size: 1.4rem; }
+  .cta-banner h3 { font-size: 1.3rem; }
+}
