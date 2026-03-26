@@ -1,14 +1,430 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ceintureeetcorset - Cabinet Orthopédique</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ceintures et Corsets - DSA Orthopédie</title>
+  
+  <link rel="icon" type="image/png" href="picture/logo.webp">
+  <link rel="stylesheet" href="styles.css">
+  
+  <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
-    <h1>ceintureeetcorset</h1>
-    <p>Description du service ceintureeetcorset</p>
-    <script src="script.js"></script>
+
+<nav>
+  <div class="nav-inner">
+    <a href="#" class="nav-logo" onclick="scrollToTop()">
+      <img src="picture/logo.webp" alt="Logo DSA Orthopédie" class="nav-logo-img">
+      DSA Orthopédie
+    </a>
+    <ul class="nav-links">
+
+  
+  <li class="dropdown">
+    <a href="index.html#expertises" class="dropdown-toggle">
+      Nos actes <i data-lucide="chevron-down" style="width:14px; margin-left:2px;"></i>
+    </a>
+    <ul class="dropdown-menu">
+            <li><a href="orthesie.html">Orthésie</a></li>
+            <li><a href="podologie.html">Podologie</a></li>
+            <li><a href="lymphologie.html">Lymphologie</a></li>
+            <li><a href="ceinturee_et_corset.html">Ceintures et Corsets</a></li>
+            <li><a href="masque_de_protection.html">Masques de protection</a></li>
+          </ul>
+        </li>
+        <li><a href="index.html#presentation">Présentation</a></li>
+        <li><a href="index.html#chiffres">Chiffres</a></li>
+        <li><a href="index.html#avis">Avis</a></li>
+        <li><a href="index.html#horaires">Horaires</a></li>
+        <li><a href="index.html#tarifs">Tarifs</a></li>
+        <li><a href="index.html#acces">Accès</a></li>
+        <li><a href="index.html#partenaires">Partenaires</a></li>
+      </ul>
+    <button class="hamburger" onclick="toggleMenu()" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html#presentation" onclick="closeMenu()"><i data-lucide="building-2" style="width:18px;margin-right:8px"></i> Présentation</a>
+  <a href="index.html#chiffres" onclick="closeMenu()"><i data-lucide="bar-chart-3" style="width:18px;margin-right:8px"></i> Chiffres</a>
+  
+  <div class="mobile-dropdown">
+    <button class="mobile-dropdown-toggle active" onclick="toggleMobileDropdown()">
+      <div style="display:flex; align-items:center;">
+        <i data-lucide="stethoscope" style="width:18px;margin-right:8px"></i> Nos actes
+      </div>
+      <i data-lucide="chevron-down" class="chevron-icon" style="width:18px; transform: rotate(180deg);"></i>
+    </button>
+    <div class="mobile-dropdown-content" id="mobileDropdownContent" style="max-height: 500px;">
+      <a href="orthesie.html" onclick="closeMenu()">Orthésie</a>
+      <a href="podologie.html" onclick="closeMenu()">Podologie</a>
+      <a href="lymphologie.html" onclick="closeMenu()">Lymphologie</a>
+      <a href="ceinturee_et_corset.html" onclick="closeMenu()" style="color: var(--primary); font-weight: 600;">Ceintures et Corsets</a>
+      <a href="masque_de_protection.html" onclick="closeMenu()">Masques de protection</a>
+    </div>
+  </div>
+
+  <a href="index.html#avis" onclick="closeMenu()"><i data-lucide="star" style="width:18px;margin-right:8px"></i> Avis</a>
+  <a href="index.html#horaires" onclick="closeMenu()"><i data-lucide="clock" style="width:18px;margin-right:8px"></i> Horaires</a>
+  <a href="index.html#tarifs" onclick="closeMenu()"><i data-lucide="banknote" style="width:18px;margin-right:8px"></i> Tarifs</a>
+  <a href="index.html#acces" onclick="closeMenu()"><i data-lucide="map-pin" style="width:18px;margin-right:8px"></i> Accès</a>
+  <a href="index.html#partenaires" onclick="closeMenu()"><i data-lucide="handshake" style="width:18px;margin-right:8px"></i> Partenaires</a>
+</div>
+
+<header class="service-hero anim">
+  <div class="service-hero-content">
+    <span class="hero-badge"><i data-lucide="shield" style="width:16px;vertical-align:middle;margin-right:6px"></i> Maintien lombaire & abdominal</span>
+    <h1>Ceintures et Corsets</h1>
+    <p>Des solutions d'appareillage du tronc, de série ou sur mesure, pour soutenir votre colonne vertébrale et soulager vos douleurs.</p>
+  </div>
+</header>
+
+<main style="max-width: 1100px; margin: 0 auto; padding: 20px 24px 60px;">
+  
+  <div class="service-block anim">
+    <div class="service-text">
+      <h2><i data-lucide="info" style="color:var(--accent); width:28px; height:28px; margin-right:8px; vertical-align:middle;"></i> Qu'est-ce que l'appareillage du tronc ?</h2>
+      <p>L'appareillage du tronc regroupe les ceintures (lombaires, abdominales) et les corsets orthopédiques. Ils sont conçus pour soutenir, immobiliser ou corriger la posture de la colonne vertébrale, du thorax ou de l'abdomen. En diminuant les contraintes mécaniques sur les vertèbres et en soutenant la sangle abdominale, ils soulagent efficacement la douleur.</p>
+      <p>Au cabinet, nous proposons la délivrance d'appareillages de <strong>série</strong> pour un soulagement immédiat, ainsi que la conception de ceintures et corsets <strong>sur mesure</strong> (coutil baleiné, matériaux thermoplastiques) fabriqués à partir d'une prise de mesure précise de votre morphologie.</p>
+    </div>
+    <div class="service-image-box">
+      <img src="picture/photo_corset.webp" alt="Appareillage du tronc, ceinture et corset" class="service-img">
+    </div>
+  </div>
+
+  <div class="divider"><hr></div>
+
+  <div class="service-block anim reverse-layout" style="margin-top: 60px;">
+    <div class="service-text">
+      <h2><i data-lucide="activity" style="color:var(--accent); width:28px; height:28px; margin-right:8px; vertical-align:middle;"></i> Indications et pathologies</h2>
+      <p>L'appareillage orthopédique du tronc est indiqué dans de nombreuses situations, qu'il s'agisse de prévention (efforts, travail), de traitement de la douleur ou de maintien post-opératoire rigoureux.</p>
+      
+      <div class="pathology-grid">
+        <div class="pathology-item"><i data-lucide="check-circle-2"></i> Lombalgie, lumbago et sciatique</div>
+        <div class="pathology-item"><i data-lucide="check-circle-2"></i> Hernie discale et tassement vertébral</div>
+        <div class="pathology-item"><i data-lucide="check-circle-2"></i> Éventration et hernie abdominale</div>
+        <div class="pathology-item"><i data-lucide="check-circle-2"></i> Maintien post-opératoire (chirurgie viscérale)</div>
+        <div class="pathology-item"><i data-lucide="check-circle-2"></i> Cyphose ou scoliose (correction/maintien)</div>
+        <div class="pathology-item"><i data-lucide="check-circle-2"></i> Prévention lors du port de charges lourdes</div>
+      </div>
+    </div>
+    <div class="service-image-box">
+      <img src="picture/photo_corset_beige.webp" alt="Consultation pour un corset orthopédique" class="service-img">
+    </div>
+  </div>
+
+  <div class="cta-banner anim" style="margin-top: 60px;">
+    <div class="cta-banner-content">
+      <h3>Besoin d'une ceinture ou d'un corset orthopédique ?</h3>
+      <p>Prenez rendez-vous au cabinet pour une prise de mesure rigoureuse afin d'assurer l'efficacité et le confort de votre appareillage.</p>
+      <a href="https://www.doctolib.fr/orthopediste-orthesiste/jouy-le-moutier/damien-salhorgne#location" target="_blank" rel="noopener noreferrer" class="btn btn-doctolib cta-btn">
+        <img src="picture/doctolib_logo.webp" alt="Doctolib" style="width: 20px; height: 20px; filter: brightness(0) invert(1); margin-right: 8px;">
+        Prendre rendez-vous sur Doctolib
+      </a>
+    </div>
+  </div>
+</main>
+
+<div class="divider"><hr></div>
+
+<section id="autres-soins">
+  <div class="section-header anim">
+    <span class="section-icon"><i data-lucide="layers" style="width:40px;height:40px;color:var(--primary)"></i></span>
+    <h2>Découvrez nos autres spécialités</h2>
+    <p>Une prise en charge globale pour votre confort et votre santé</p>
+  </div>
+  
+  <div class="cards-grid">
+    <a href="orthesie.html" class="card card-img-box anim d1">
+      <img src="picture/photo_orthese_1.webp" alt="Orthésie" class="card-image">
+      <div class="card-content">
+        <h3>Orthésie</h3>
+      </div>
+    </a>
+
+    <a href="podologie.html" class="card card-img-box anim d2">
+      <img src="picture/photo_chaussure_podologique.webp" alt="Podologie" class="card-image">
+      <div class="card-content">
+        <h3>Podologie</h3>
+      </div>
+    </a>
+
+    <a href="lymphologie.html" class="card card-img-box anim d3">
+      <img src="picture/photo_lymphologie.webp" alt="Lymphologie" class="card-image">
+      <div class="card-content">
+        <h3>Lymphologie</h3>
+      </div>
+    </a>
+
+    <a href="masque_de_protection.html" class="card card-img-box anim d4">
+      <img src="picture/photo_masque_orthopedique.webp" alt="Masque de protection" class="card-image">
+      <div class="card-content">
+        <h3>Masque de protection</h3>
+      </div>
+    </a>
+  </div>
+</section>
+
+<div class="divider"><hr></div>
+
+<section class="reviews-section" id="avis">
+  <div class="section-header anim">
+    <span class="section-icon"><i data-lucide="star" style="width:40px;height:40px;color:var(--primary)"></i></span>
+    <h2>Avis de nos patients</h2>
+    <p>Ce que nos clients disent de nous</p>
+  </div>
+
+  <div class="reviews-summary anim">
+    <div class="reviews-big-score">
+      <div class="reviews-big-number">4.2</div>
+      <div class="reviews-big-stars">
+        <i data-lucide="star" style="width:20px;height:20px;fill:var(--star);color:var(--star)"></i>
+        <i data-lucide="star" style="width:20px;height:20px;fill:var(--star);color:var(--star)"></i>
+        <i data-lucide="star" style="width:20px;height:20px;fill:var(--star);color:var(--star)"></i>
+        <i data-lucide="star" style="width:20px;height:20px;fill:var(--star);color:var(--star)"></i>
+        <i data-lucide="star" style="width:20px;height:20px;color:var(--star)"></i>
+      </div>
+      <div class="reviews-big-count">38 avis Google</div>
+    </div>
+    <div class="reviews-bars">
+      <div class="review-bar-row"><span>5</span><div class="review-bar"><div class="review-bar-fill" data-width="60" style="width:0%"></div></div><span>68%</span></div>
+      <div class="review-bar-row"><span>4</span><div class="review-bar"><div class="review-bar-fill" data-width="15" style="width:0%"></div></div><span>16%</span></div>
+      <div class="review-bar-row"><span>3</span><div class="review-bar"><div class="review-bar-fill" data-width="5" style="width:0%"></div></div><span>0%</span></div>
+      <div class="review-bar-row"><span>2</span><div class="review-bar"><div class="review-bar-fill" data-width="5" style="width:0%"></div></div><span>0%</span></div>
+      <div class="review-bar-row"><span>1</span><div class="review-bar"><div class="review-bar-fill" data-width="15" style="width:0%"></div></div><span>16%</span></div>
+    </div>
+  </div>
+
+  <div class="reviews-track-wrapper">
+    <div class="reviews-track" id="reviewsTrack">
+      <div class="review-card positive">
+        <div class="review-header">
+          <div class="review-avatar" style="background:linear-gradient(135deg,#fd79a8,#e84393)">F</div>
+          <div class="review-meta"><div class="review-name">Farrah Derradj</div><div class="review-info">Local Guide · 15 avis</div></div>
+        </div>
+        <div class="review-stars">
+          <i data-lucide="star" style="width:14px;height:14px;fill:var(--star);color:var(--star)"></i><i data-lucide="star" style="width:14px;height:14px;fill:var(--star);color:var(--star)"></i><i data-lucide="star" style="width:14px;height:14px;fill:var(--star);color:var(--star)"></i><i data-lucide="star" style="width:14px;height:14px;fill:var(--star);color:var(--star)"></i><i data-lucide="star" style="width:14px;height:14px;fill:var(--star);color:var(--star)"></i>
+        </div>
+        <div class="review-text">Je recommande à 100 % si vous cherchez un praticien passionné et dévoué, vous êtes au bon endroit ! Professionnel de très bon conseil et très compétent...</div>
+      </div>
+      <div class="review-card positive">
+        <div class="review-header">
+          <div class="review-avatar" style="background:linear-gradient(135deg,#0984e3,#74b9ff)">I</div>
+          <div class="review-meta"><div class="review-name">Isabelle Doye</div><div class="review-info">3 avis</div></div>
+        </div>
+        <div class="review-stars">
+          <i data-lucide="star" style="width:14px;height:14px;fill:var(--star);color:var(--star)"></i><i data-lucide="star" style="width:14px;height:14px;fill:var(--star);color:var(--star)"></i><i data-lucide="star" style="width:14px;height:14px;fill:var(--star);color:var(--star)"></i><i data-lucide="star" style="width:14px;height:14px;fill:var(--star);color:var(--star)"></i><i data-lucide="star" style="width:14px;height:14px;fill:var(--star);color:var(--star)"></i>
+        </div>
+        <div class="review-text">Merci d'avoir su adapter vos explications et votre attitude à mon enfant qui a été vite rassuré pendant l'examen. Je recommande ce praticien.</div>
+      </div>
+      <div class="review-card positive">
+        <div class="review-header">
+          <div class="review-avatar" style="background:linear-gradient(135deg,#00b894,#55efc4)">M</div>
+          <div class="review-meta"><div class="review-name">Matis</div><div class="review-info">5 avis</div></div>
+        </div>
+        <div class="review-stars">
+          <i data-lucide="star" style="width:14px;height:14px;fill:var(--star);color:var(--star)"></i><i data-lucide="star" style="width:14px;height:14px;fill:var(--star);color:var(--star)"></i><i data-lucide="star" style="width:14px;height:14px;fill:var(--star);color:var(--star)"></i><i data-lucide="star" style="width:14px;height:14px;fill:var(--star);color:var(--star)"></i><i data-lucide="star" style="width:14px;height:14px;fill:var(--star);color:var(--star)"></i>
+        </div>
+        <div class="review-text">Très bon orthopédiste, amical, à l'écoute, on voit qu'il s'y connait, efficace. L'appareillage est durable. Je recommanderais.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"><hr></div>
+
+<section id="acces">
+  <div class="section-header anim">
+    <span class="section-icon"><i data-lucide="map-pin" style="width:40px;height:40px;color:var(--primary)"></i></span>
+    <h2>Accès & informations pratiques</h2>
+    <p>Cabinet Jouy-le-Moutier</p>
+  </div>
+  
+  <div class="map-container anim-s" id="mapContainer">
+    <div class="map-consent-overlay" id="mapConsentOverlay">
+      <i data-lucide="map" style="width: 42px; height: 42px; color: var(--primary); margin-bottom: 12px;"></i>
+      <h3>Carte interactive Google Maps</h3>
+      <p>En cliquant sur "Afficher la carte", vous acceptez le dépôt de cookies par Google destinés à vous proposer une carte interactive.</p>
+      <button onclick="acceptMapCookies()">
+        <i data-lucide="eye" style="width: 18px;"></i> Afficher la carte
+      </button>
+    </div>
+    <iframe 
+      id="googleMapIframe"
+      data-src="https://maps.google.com/maps?q=6%20All%C3%A9e%20de%20Jouy,%2095280%20Jouy-le-Moutier&t=&z=16&ie=UTF8&iwloc=&output=embed" 
+      width="100%" 
+      height="100%" 
+      style="border:0;" 
+      allowfullscreen="" 
+      loading="lazy" 
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+
+  <div class="access-grid">
+    <div class="access-card anim-l">
+      <h3><i data-lucide="bus" style="width:20px;vertical-align:middle"></i> Transports en commun</h3>
+      <ul class="access-list">
+        <li><span class="ico"><i data-lucide="bus" style="width:16px"></i></span> Les Éguérets — lignes 1203 et 1207</li>
+        <li><span class="ico"><i data-lucide="bus" style="width:16px"></i></span> Les Jouannes — lignes 1203, 1207 et 1210</li>
+        <li><span class="ico"><i data-lucide="bus" style="width:16px"></i></span> Le Stade (le plus proche) — lignes 1203 et 1207</li>
+      </ul>
+    </div>
+    <div class="access-card anim-r">
+      <h3><i data-lucide="accessibility" style="width:20px;vertical-align:middle"></i> Accessibilité</h3>
+      <ul class="access-list">
+        <li><span class="ico"><i data-lucide="building" style="width:16px"></i></span> Cabinet situé au rez-de-chaussée</li>
+        <li><span class="ico"><i data-lucide="door-open" style="width:16px"></i></span> Entrée accessible PMR</li>
+        <li><span class="ico"><i data-lucide="square-parking" style="width:16px"></i></span> Parking gratuit à proximité</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<div class="divider"><hr></div>
+
+<section id="contact">
+  <div class="section-header anim"><span class="section-icon"><i data-lucide="phone-call" style="width:40px;height:40px;color:var(--primary)"></i></span><h2>Contact</h2><p>Prenez rendez-vous ou contactez-nous</p></div>
+  
+  <div class="contact-grid">
+    <div class="contact-card anim-l">
+      <i data-lucide="phone" class="emoji-lg" style="width:42px;height:42px;color:var(--primary)"></i>
+      <h3>Téléphone cabinet</h3>
+      <p>01 30 30 66 86</p>
+    </div>
+    
+    <div class="contact-card anim">
+      <i data-lucide="mail" class="emoji-lg" style="width:42px;height:42px;color:var(--primary)"></i>
+      <h3>E-mail</h3>
+      <p style="font-size:1rem; word-break:break-word;">dsaorthopedie@gmail.com</p>
+    </div>
+
+    <div class="contact-card anim">
+      <i data-lucide="smartphone" class="emoji-lg" style="width:42px;height:42px;color:var(--primary)"></i>
+      <h3>Urgences Médicales</h3>
+      <p>06 66 46 11 50</p>
+      <p class="label">Portable personnel</p>
+    </div>
+
+    <a href="https://www.doctolib.fr/orthopediste-orthesiste/jouy-le-moutier/damien-salhorgne#location" target="_blank" rel="noopener noreferrer" class="contact-card contact-card-doctolib anim-r" style="text-decoration:none;">
+      <img src="picture/doctolib_logo.webp" alt="Doctolib" class="emoji-lg" style="width:42px; height:42px; filter:brightness(0) invert(1); display:inline-block; margin-bottom:14px; transition:transform 0.4s;">
+      <h3>Prendre rendez-vous</h3>
+      <p>Sur Doctolib</p>
+    </a>
+  </div>
+
+  <div class="urgence-banner anim">
+    <h3><i data-lucide="alert-triangle" style="width:18px;vertical-align:middle;margin-right:6px"></i> Contact d'urgence</h3>
+    <p>En cas d'urgences Médicales, contactez le 06 66 46 11 50</p>
+  </div>
+</section>
+
+<div class="divider"><hr></div>
+
+<section id="partenaires">
+  <div class="section-header anim">
+    <span class="section-icon"><i data-lucide="handshake" style="width:40px;height:40px;color:var(--primary)"></i></span>
+    <h2>Nos Partenaires</h2>
+    <p>Réseaux et professionnels qui nous font confiance</p>
+  </div>
+  
+  <div class="partners-container anim-s">
+    <a href="#" target="_blank" rel="noopener noreferrer" class="partner-card">
+      <img src="picture/logo_partenaire/logo_partenaire_capron.webp" alt="Logo partenaire Capron Podologie" class="partner-logo">
+    </a>
+    <a href="#" target="_blank" rel="noopener noreferrer" class="partner-card">
+      <img src="picture/logo_partenaire/logo_partenaire_citeza_medicali.webp" alt="Logo partenaire Cizeta Medicali" class="partner-logo">
+    </a>
+    <a href="#" target="_blank" rel="noopener noreferrer" class="partner-card">
+      <img src="picture/logo_partenaire/logo_partenaire_CPPAV.webp" alt="Logo partenaire CPPAV" class="partner-logo">
+    </a>
+    <a href="#" target="_blank" rel="noopener noreferrer" class="partner-card">
+      <img src="picture/logo_partenaire/logo_partenaire_kinetec.webp" alt="Logo partenaire Kinetec" class="partner-logo">
+    </a>
+    <a href="#" target="_blank" rel="noopener noreferrer" class="partner-card">
+      <img src="picture/logo_partenaire/logo_partenaire_medi.webp" alt="Logo partenaire Medi" class="partner-logo">
+    </a>
+    <a href="#" target="_blank" rel="noopener noreferrer" class="partner-card">
+      <img src="picture/logo_partenaire/logo_partenaire_orfit.webp" alt="Logo partenaire Orfit" class="partner-logo">
+    </a>
+    <a href="#" target="_blank" rel="noopener noreferrer" class="partner-card">
+      <img src="picture/logo_partenaire/logo_partenaire_podofrance.webp" alt="Logo partenaire Podofrance" class="partner-logo">
+    </a>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-col footer-about">
+      <div class="footer-brand">
+        <i data-lucide="footprints" style="width:28px; height:28px; color:var(--accent);"></i>
+        DSA Orthopédie
+      </div>
+      <p class="footer-desc">
+        Damien Salhorgne<br>
+        <strong>Orthopédiste · Orthésiste · Podologiste</strong>
+      </p>
+      <div class="footer-contact-info">
+        <p><i data-lucide="map-pin"></i> 6 Allée de Jouy, 95280 Jouy-le-Moutier</p>
+        <p><i data-lucide="phone"></i> 01 30 30 66 86</p>
+        <p><i data-lucide="mail"></i> dsaorthopedie@gmail.com</p>
+      </div>
+      <a href="https://www.doctolib.fr/orthopediste-orthesiste/jouy-le-moutier/damien-salhorgne#location" target="_blank" rel="noopener noreferrer" class="btn-doctolib-footer">
+        <img src="picture/doctolib_logo.webp" alt="Doctolib" style="width:16px; height:16px; filter:brightness(0) invert(1);">
+        Prendre RDV en ligne
+      </a>
+    </div>
+
+    <div class="footer-col">
+      <h3>Le Cabinet</h3>
+      <ul class="footer-links">
+        <li><a href="index.html#presentation">Présentation</a></li>
+        <li><a href="index.html#expertises">Nos expertises</a></li>
+        <li><a href="index.html#avis">Avis patients</a></li>
+        <li><a href="index.html#tarifs">Tarifs & Remboursements</a></li>
+        <li><a href="index.html#acces">Accès au cabinet</a></li>
+        <li><a href="index.html#partenaires">Nos partenaires</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h3>Nos Soins</h3>
+      <ul class="footer-links">
+        <li><a href="orthesie.html">Orthésie</a></li>
+        <li><a href="podologie.html">Podologie</a></li>
+        <li><a href="lymphologie.html">Lymphologie</a></li>
+        <li><a href="ceinturee_et_corset.html">Ceintures et Corsets</a></li>
+        <li><a href="masque_de_protection.html">Masques de protection</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h3>Horaires</h3>
+      <ul class="footer-hours">
+        <li><span>Mardi</span> <span>09h30 - 19h30</span></li>
+        <li><span>Mercredi</span> <span>09h30 - 19h30</span></li>
+        <li><span>Jeudi</span> <span>09h30 - 19h30</span></li>
+        <li><span>Vendredi</span> <span>09h30 - 19h30</span></li>
+        <li><span style="opacity: 0.6;">Sam - Lun</span> <span style="opacity: 0.6;">Fermé</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="footer-bottom-inner">
+      <p>© 2026 DSA Orthopédie — Tous droits réservés.</p>
+      <div class="footer-legal-links">
+        <a href="mentions_legales.html">Mentions légales</a>
+        <span class="separator">|</span>
+        <a href="mentions_legales.html#confidentialite">Politique de confidentialité</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<button class="scroll-top" id="scrollTopBtn" onclick="scrollToTop()"><i data-lucide="arrow-up"></i></button>
+
+<script src="script.js"></script>
 </body>
 </html>
