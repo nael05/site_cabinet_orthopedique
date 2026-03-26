@@ -135,3 +135,25 @@ function acceptMapCookies() {
     }
   }
 }
+
+// ==========================================
+// INITIALISATION DES ICÔNES LUCIDE
+// ==========================================
+document.addEventListener('DOMContentLoaded', () => {
+    if (typeof lucide !== 'undefined') {
+        lucide.createIcons();
+    }
+});
+
+// ==========================================
+// ANIMATIONS AU DÉFILEMENT (SCROLL)
+// ==========================================
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if(entry.isIntersecting) {
+            entry.target.classList.add('visible');
+        }
+    });
+}, { threshold: 0.15, rootMargin: "0px 0px -50px 0px" });
+
+document.querySelectorAll('.anim, .anim-s, .anim-l, .anim-r').forEach(el => observer.observe(el));
