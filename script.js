@@ -32,14 +32,12 @@ window.addEventListener('scroll',()=>{
 const obs=new IntersectionObserver((entries)=>{
   entries.forEach(e=>{
     if(e.isIntersecting){
-      e.target.classList.add('visible');
-      // Counters
+      e.target.classList.add('visible');
       e.target.querySelectorAll('.counter').forEach(c=>{
         if(c.dataset.animated)return;
         c.dataset.animated='true';
         animateCounter(c);
-      });
-      // Review bars
+      });
       e.target.querySelectorAll('.review-bar-fill').forEach(b=>{
         if(b.dataset.animated)return;
         b.dataset.animated='true';
@@ -102,11 +100,7 @@ function toggleMobileDropdown() {
     content.style.maxHeight = content.scrollHeight + "px";
     toggleBtn.classList.add('active');
   }
-}
-
-// ==========================================
-// GESTION DU CONSENTEMENT GOOGLE MAPS (RGPD)
-// ==========================================
+}
 document.addEventListener('DOMContentLoaded', () => {
   const mapConsent = localStorage.getItem('googleMapsConsent');
   const iframe = document.getElementById('googleMapIframe');
@@ -134,20 +128,12 @@ function acceptMapCookies() {
       lucide.createIcons();
     }
   }
-}
-
-// ==========================================
-// INITIALISATION DES ICÔNES LUCIDE
-// ==========================================
+}
 document.addEventListener('DOMContentLoaded', () => {
     if (typeof lucide !== 'undefined') {
         lucide.createIcons();
     }
-});
-
-// ==========================================
-// ANIMATIONS AU DÉFILEMENT (SCROLL)
-// ==========================================
+});
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if(entry.isIntersecting) {
